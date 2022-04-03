@@ -1,0 +1,202 @@
+<div class="container mt">
+  <h4>REGISTRATION FORM</h4>
+  <form
+    #regForm="ngForm"
+    (ngSubmit)="SubmitData(regForm)"
+    class="form-horizontal"
+  >
+    <div class="form-group">
+      <label for="userName" class="col-sm-3 control-label">Username</label>
+      <div class="col-sm-6">
+        <input
+          class="form-control"
+          name="userName"
+          placeholder="Username"
+          ngModel
+          required
+        />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="fullName" class="col-sm-3 control-label">Full Name</label>
+      <div class="col-sm-6">
+        <input
+          type="text"
+          class="form-control"
+          name="fullName"
+          placeholder="Full Name"
+          ngModel
+          required
+        />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="phoneNumber" class="col-sm-3 control-label"
+        >Phone number</label
+      >
+      <div class="col-sm-6">
+        <input
+          type="text"
+          class="form-control"
+          name="phoneNumber"
+          placeholder="Phone Number"
+          required
+        />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="dob" class="col-sm-3 control-label">Date Of Birth</label>
+      <div class="col-sm-6">
+        <input
+          type="date"
+          class="form-control"
+          name="dob"
+          placeholder="Date of Birth"
+          ngModel
+          required
+        />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email" class="col-sm-3 control-label">Email</label>
+      <div class="col-sm-6">
+        <input
+          type="email"
+          class="form-control"
+          name="email"
+          placeholder="Email"
+          ngModel
+          required
+          email
+        />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password" class="col-sm-3 control-label">Password</label>
+      <div class="col-sm-6">
+        <input
+          type="password"
+          class="form-control"
+          name="accPassword"
+          placeholder="Password"
+          ngModel
+          required
+        />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="confirmPassword" class="col-sm-3 control-label"
+        >Confirm Password</label
+      >
+      <div class="col-sm-6">
+        <input
+          type="password"
+          appConfirmEqualValidator
+          class="form-control"
+          name="confirmPassword"
+          placeholder="Confirm Password"
+          ngModel
+          required
+        />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="address" class="col-sm-3 control-label">Address</label>
+      <div class="col-sm-6">
+        <input
+          class="form-control"
+          required
+          name="homeAddress"
+          placeholder="Address"
+          ngModel
+        />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="bank" class="col-sm-3 control-label">Bank</label>
+      <div class="col-sm-6">
+        <input
+          class="form-control"
+          required
+          name="bankName"
+          placeholder="Bank"
+          ngModel
+        />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="accountNumber" class="col-sm-3 control-label"
+        >Account Number</label
+      >
+      <div class="col-sm-6">
+        <input
+          class="form-control"
+          required
+          type="number"
+          name="accountNumber"
+          placeholder="Account Number"
+          ngModel
+        />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="ifsc" class="col-sm-3 control-label">IFSC Code</label>
+      <div class="col-sm-6">
+        <input
+          class="form-control"
+          required
+          name="ifscCode"
+          placeholder="IFSC Code"
+          ngModel
+        />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="cardType" class="col-sm-3 control-label">Card Type</label>
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="radio">
+              <label>
+                <input
+                  type="radio"
+                  name="cardType"
+                  value="Gold"
+                  required
+                  ngModel
+                />
+                Gold
+              </label>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="radio">
+              <label>
+                <input
+                  type="radio"
+                  value="Titanium"
+                  name="cardType"
+                  ngModel
+                  required
+                />
+                Titanium
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group text-center">
+      <input
+        type="submit"
+        value="Register"
+        [disabled]="!regForm.valid"
+        class="btn btn-primary mr"
+      />
+
+      <input type="button" value="Reset" class="btn btn-warning" />
+    </div>
+    <br />
+  </form>
+</div>

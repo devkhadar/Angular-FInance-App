@@ -1,0 +1,72 @@
+<div class="container mt">
+  <h1 class="text-center">Login</h1>
+  <form
+    #loginForm="ngForm"
+    (ngSubmit)="onLogin(loginForm)"
+    class="form-horizontal"
+  >
+    <div class="form-group">
+      <label for="userName" class="col-sm-3 control-label">Username</label>
+      <div class="col-sm-6">
+        <input
+          class="form-control"
+          name="userName"
+          placeholder="Username"
+          ngModel
+          required
+        />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password" class="col-sm-3 control-label">Password</label>
+      <div class="col-sm-6">
+        <input
+          type="password"
+          class="form-control"
+          name="accPassword"
+          placeholder="Password"
+          ngModel
+          required
+        />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="cardType" class="col-sm-3 control-label">User Type</label>
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="radio">
+              <label>
+                <input
+                  type="radio"
+                  name="type"
+                  value="Admin"
+                  required
+                  ngModel
+                />
+                Admin
+              </label>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="radio">
+              <label>
+                <input type="radio" name="type" value="User" ngModel required />
+                User
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group text-center">
+      <input
+        type="submit"
+        value="Login"
+        [disabled]="!loginForm.valid"
+        class="btn btn-primary mr"
+      />
+    </div>
+    <br />
+  </form>
+</div>

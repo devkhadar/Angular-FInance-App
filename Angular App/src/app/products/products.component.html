@@ -1,0 +1,96 @@
+<div id="nav">
+    <ul id="p2">
+        <li><a href="/login">LOGOUT</a></li>
+    </ul>
+    <!-- <h2>hi {{username}}</h2> -->
+</div>
+
+<!--<div id="divProducts">
+<<div *ngIf="productData && productData.length>0; else alternate" class="form">
+        <div *ngFor="let p of productData">
+            <div class="row">
+                <div class="col">
+                    <img [src]="p.image">
+                     <span>{{p.productid}}</span><br>
+                     <span>{{p.Name|lowercase}}</span><br>
+                     <span>{{p.price|currency:'INR'}}</span><br>
+                     <span>{{p.status}}</span><br>
+                     <button roterlink="/hp" (click)="submit()">Buy now</button>
+                     </div>
+                </div>
+            </div>  
+                
+        </div>
+    </div>
+    
+
+
+    <ng-template #alternate>
+        <div>No Products Found</div>
+    </ng-template>-->
+<div id="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+                <!-- Carousel indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <!-- Wrapper for carousel items -->
+                <div class="carousel-inner">
+                    <div class="item carousel-item active">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper">
+                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                    <div class="img-box">
+                                        <img src="https://merchantfly.com/wp-content/uploads/2015/08/Dell-XPS-13_021.jpeg"
+                                            class="img-fluid" alt="">
+                                    </div>
+                                    <div class="thumb-content">
+                                        <h4>dellxp</h4>
+
+                                        <p class="item-price"><b>₹40000</b></p>
+                                        <p class="status"><b>Availalble</b></p>
+                                        <button routerLink="/dell">Buy Now</button>
+                                    </div>
+
+                                </div>
+                            </div><br>
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper">
+                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                    <div class="img-box">
+                                        <img src="https://tse4.mm.bing.net/th?id=OIP.cQU3uEk3l6y6Ylx60F_0JgHaF6&pid=Api&P=0&w=216&h=172"
+                                            class="img-fluid" alt="Headphone">
+                                    </div>
+                                    <div class="thumb-content">
+                                        <h4>hp</h4>
+                                    </div>
+                                    <p class="item-price"><b>₹350000</b></p>
+                                    <p class="status"><b>Not available</b></p>
+                                    <button routerLink="/hp">Buy now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="thumb-wrapper">
+                                <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                <div class="img-box">
+                                    <img src="https://i5.walmartimages.com/asr/a40a3e87-1103-4f4e-be17-5d5f3a194ff7.c71c03a45c9002d01578ef83db8828e4.jpeg"
+                                        class="img-fluid" alt="Macbook">
+                                </div>
+                                <div class="thumb-content">
+                                    <h4>Lenovothinkpad</h4>
+                                    <p class="item-price"><b>₹500000</b></p>
+                                    <p class="item-status"><b>Availalble</b></p>
+                                    <button routerLink="/Lenovo">Buy now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>

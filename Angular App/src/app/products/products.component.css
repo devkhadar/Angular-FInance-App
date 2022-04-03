@@ -1,0 +1,27 @@
+#nav{
+    border: 2px solid black;
+    overflow: auto;
+}
+#p2{
+    float: right;
+}
+h2{
+    float: right;
+}
+img{
+   float: left;
+   width:200px;
+}
+#container{
+border: 1px solid black;
+overflow:auto;
+padding: 2px;
+margin: 2px;
+}
+li{
+    float:left;
+    list-style-type:none;
+    border:2px solid block;
+    margin:3px;
+    padding:1px;
+}
